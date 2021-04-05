@@ -51,7 +51,7 @@ export function handler(event, context, callback) {
   
   request.post({'url': buildURL}, function(err, httpResponse, body) {
     console.log("RESPONSE: " + httpResponse);
-  }
+  });
 
   // ENHANCEMENT: check for uniqueness of shortcode
   // ENHANCEMENT: let the user provide their own shortcode
