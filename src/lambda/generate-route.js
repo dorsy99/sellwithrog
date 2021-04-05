@@ -9,6 +9,7 @@ export function handler(event, context, callback) {
 
   // Set the root URL according to the Netlify site we are within
   var rootURL =  process.env.URL + "/";
+  var buildURL = process.env.BUILD_URL;
 
   // get the details of what we are creating
   var destination = event.queryStringParameters['to'];
@@ -47,6 +48,10 @@ export function handler(event, context, callback) {
       body: JSON.stringify({"url": rootURL + code})
     })
   });
+  
+  request.post({'url': buildURL}, function(err, httpResponse, body) {
+    console.log("RESPONSE: " + httpResponse);
+  }
 
   // ENHANCEMENT: check for uniqueness of shortcode
   // ENHANCEMENT: let the user provide their own shortcode
