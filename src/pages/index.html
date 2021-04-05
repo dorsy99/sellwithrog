@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>LinkyLinky</title>
+    <title>Sell With Rog Link Creator</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     <link rel="stylesheet" href="/css/main.css" />
     <script src="/js/linky.js" async></script>
@@ -10,25 +10,29 @@
   <body class="home">
     <header>
       <div class="container">
-        <h1>LinkyLinky</h1>
+        <h1>Sell With Rog - Link Creator</h1>
         <p>A URL shortener of your very own</p>
       </div>
     </header>
     <div class="content">
       <div class="container">
-        <form name="make-url" onsubmit="submitURL();">
+        <form name="make-url" onsubmit="submitURL();" data-netlify="true">
           <p>
             <label for="destination">Address to shorten:</label>
             <input type="url" name="destination" id="destination">
           </p>
           <p>
-            <button type="submit" class="btn" id="btn-create">Get a short link</button>
+            <label for="link">Link to use:</label>
+            <input type="text" name="link" id="link">
+          </p>
+          <p>
+            <button type="submit" class="btn" id="btn-create">Create Your Link</button>
           </p>
           <div class="message" id="message"></div>
         </form>
       </div>
     </div>
-    <footer>
+<!---    <footer>
     <div class="container">
       <p>
         This is a <a href="https://www.jamstack.org">JAMstack</a> site, generated and hosted on <a href="https://www.netlify.com">Netlify</a>.<br/>
@@ -40,6 +44,6 @@
         </a>
       </p>
     </div>
-    </footer>
+    </footer> -->
   </body>
 </html>
