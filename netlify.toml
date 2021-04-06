@@ -6,14 +6,14 @@
 
 
 [[redirects]]
-##from = "/*"
-  from = "/addalink"
+  from = "/*"
+##from = "/addalink"
   to = "/index.html"
   status = 200
 
-[[redirects]]
-  from = "/*"
-  to = "https://www.facebook.com/rogerfirstnationalipswich"
-  status = 200
-  force = true
+#[[redirects]]
+#  from = "/*"
+#  to = "https://www.facebook.com/rogerfirstnationalipswich"
+#  status = 200
+#  force = true
 
