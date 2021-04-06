@@ -1,8 +1,8 @@
 'use strict';
 
 var request = require("request");
-var config = require("dotenv").config();
-var Hashids = require("hashids");
+//var config = require("dotenv").config();
+//var Hashids = require("hashids");
 
 
 export function handler(event, context, callback) {
@@ -13,11 +13,14 @@ export function handler(event, context, callback) {
 
   // get the details of what we are creating
   var destination = event.queryStringParameters['to'];
+  var code = event.queryStringParameters['code'];
 
   // generate a unique short code (stupidly for now)
+  /* No longer randomly generating
   var hash = new Hashids();
   var number = Math.round(new Date().getTime() / 100);
   var code = hash.encode(number);
+  */
 
   // ensure that a protocol was provided
   if(destination.indexOf("://") == -1) {
@@ -50,7 +53,11 @@ export function handler(event, context, callback) {
   });
   
   request.post({'url': buildURL}, function(err, httpResponse, body) {
-    console.log("RESPONSE: " + httpResponse);
+    if (err) {
+      console.log("ERROR IN BUILD STEP: " + err);
+    } else {
+      console.log("Rebuilding site after new code added...");
+    }
   });
 
   // ENHANCEMENT: check for uniqueness of shortcode
