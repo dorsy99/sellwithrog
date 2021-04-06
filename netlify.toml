@@ -11,6 +11,7 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
   from = "/*"
   to = "https://www.facebook.com/rogerfirstnationalipswich"
   status = 200
