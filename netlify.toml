@@ -6,7 +6,13 @@
 
 
 [[redirects]]
-  from = "/*"
+##from = "/*"
+  from = "/addalink"
   to = "/index.html"
-  status = 404
+  status = 200
+
+  from = "/*"
+  to = "https://www.facebook.com/rogerfirstnationalipswich"
+  status = 200
+  force = true
 
