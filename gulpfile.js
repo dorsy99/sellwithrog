@@ -69,6 +69,13 @@ gulp.task("js", function () {
     .pipe(gulp.dest(buildDest + '/js'))
 });
 
+gulp.task("icons", function() {
+  gulp.src(buildSrc + '/ico/**/*.*')
+  .pipe(gulp.dest(buildDest + '/ico'))
+  gulp.src(buildDest + '/ico/favicon.ico')
+  .pipe(gulp.dest(buildDest))
+})
+
 
 
 // get a list of routes stored in the form
