@@ -135,7 +135,7 @@ gulp.task("watch", ["build"], function () {
 gulp.task("build", function(callback) {
   runSequence(
     "clean-build",
-    ["get:routes", "render", "js", "scss"],
+    ["get:routes", "render", "js", "scss", "icons"],
     callback
   );
 });
