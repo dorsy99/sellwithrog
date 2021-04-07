@@ -21,18 +21,30 @@ fetch('/.netlify/functions/get-routes')
 function addRows(link, url, date) {
     tabBody = document.getElementsByTagName("tbody").item(0);
     row = document.createElement("tr");
-    slcell = document.createElement("td");
-    urlcell = document.createElement("td");
-    createdcell = document.createElement("td");
-    sldata = document.createTextNode(link);
-    urldata = document.createTextNode(url);
-    datedata = document.createTextNode(date)
-    slcell.appendChild(sldata);
-    urlcell.appendChild(urldata);
-    createdcell.appendChild(datedata);
-    row.appendChild(slcell);
-    row.appendChild(urlcell);
-    row.appendChild(datedata);
+
+    // Create the rows
+    slCell = document.createElement("td");
+    urlCell = document.createElement("td");
+    createdCell = document.createElement("td");
+    actionsCell = document.createElement("td");
+
+    // Create the text inside them
+    slData = document.createTextNode('<a href="/' + link + '">' + link + '</a>');
+    urlData = document.createTextNode('<a href="' + url + '">' + url + '</a>');
+    dateData = document.createTextNode(date);
+    actionsData = document.createTextNode("TBD");
+
+    //Add the text into the cell
+    slCell.appendChild(slData);
+    urlCell.appendChild(urlData);
+    createdCell.appendChild(dateData);
+    actionsCell.appendChild(actionsData);
+    
+    //chuck the cells into the row
+    row.appendChild(slCell);
+    row.appendChild(urlCell);
+    row.appendChild(createdCell);
+    row.appendChild(actionsCell);
     tabBody.appendChild(row);
 }
 
