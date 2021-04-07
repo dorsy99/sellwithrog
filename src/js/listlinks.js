@@ -10,7 +10,7 @@ fetch('/.netlify/functions/get-routes')
     //document.querySelector("#message").innerHTML = `<a href="${data.url}">${data.url}</a>`;
     console.log(data);
     data.forEach(function(item){
-        var shortlink = JSON.parse(item);
+        //var shortlink = JSON.parse(item);
         addRows(shortlink.data.code, shortlink.data.destination, shortlink.created_at);
     })
     return;
