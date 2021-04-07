@@ -11,7 +11,7 @@ fetch('/.netlify/functions/get-routes')
     console.log(data);
     data.forEach(function(item){
         //var shortlink = JSON.parse(item);
-        addRows(shortlink.data.code, shortlink.data.destination, shortlink.created_at);
+        addRows(item.data.code, item.data.destination, item.created_at);
     })
     return;
   });
