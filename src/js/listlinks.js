@@ -29,8 +29,18 @@ function addRows(link, url, date) {
     actionsCell = document.createElement("td");
 
     // Create the text inside them
-    slData = document.createTextNode('<a href="/' + link + '">' + link + '</a>');
-    urlData = document.createTextNode('<a href="' + url + '">' + url + '</a>');
+    slA = document.createElement('a');
+    slData = document.createTextNode(link);
+    slA.appendChild(slData);
+    slA.title = link;
+    slA.href = '/' + link;
+
+    urlA = document.createElement('a');
+    urlData = document.createTextNode(url);
+    urlA.appendChild(urlData);
+    urlA.title = url;
+    urlA.href = url;
+    
     dateData = document.createTextNode(date);
     actionsData = document.createTextNode("TBD");
 
