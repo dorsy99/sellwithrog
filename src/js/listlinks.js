@@ -45,8 +45,8 @@ function addRows(link, url, date) {
     actionsData = document.createTextNode("TBD");
 
     //Add the text into the cell
-    slCell.appendChild(slData);
-    urlCell.appendChild(urlData);
+    slCell.appendChild(slA);
+    urlCell.appendChild(urlA);
     createdCell.appendChild(dateData);
     actionsCell.appendChild(actionsData);
     
