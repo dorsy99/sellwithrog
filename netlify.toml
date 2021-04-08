@@ -18,7 +18,7 @@
 [[redirects]]
   from = "/"
   to = "https://www.facebook.com/rogerfirstnationalipswich"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/*"
