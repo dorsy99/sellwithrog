@@ -9,6 +9,7 @@ export function handler(event, context, callback) {
 
   // Set the root URL according to the Netlify site we are within
   var rootURL =  process.env.URL + "/";
+  var submitURL =  process.env.URL + "/index2.html";
   var buildURL = process.env.BUILD_URL;
 
   // get the details of what we are creating
@@ -36,7 +37,7 @@ export function handler(event, context, callback) {
   };
 
   // post the new route to the Routes form
-  request.post({'url': rootURL, 'formData': payload }, function(err, httpResponse, body) {
+  request.post({'url': submitURL, 'formData': payload }, function(err, httpResponse, body) {
     console.log("HTTPRESPONSE: " + JSON.stringify(httpResponse));
     var msg;
     if (err) {
