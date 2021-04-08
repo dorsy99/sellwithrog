@@ -6,11 +6,6 @@
 
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[redirects]]
   from = "/addalink"
   to = "/addalink.html"
   status = 200
@@ -18,6 +13,11 @@
 [[redirects]]
   from = "/listlinks"
   to = "/links.html"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
 
 #[[redirects]]
