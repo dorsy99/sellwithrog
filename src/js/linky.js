@@ -34,8 +34,15 @@ function submitURL() {
   place with a client side redirect.
 */
 function redirectIfRequired() {
+  var excludedPaths = [
+    "/",
+    "/addalink",
+    "/listlinks"
+  ];
+
   var path = document.location.pathname;
-  if(path !== "/") {
+  //if(path !== "/") {
+  if(!excludedPaths.includes(path)) {
     document.querySelector('#message').innerHTML = "The redirect rules for that short URL is still being created... sending you directly!";
     fetch('/.netlify/functions/get-route?code='+path.replace("/",""))
     .then(function(response) { return response.json(); })
