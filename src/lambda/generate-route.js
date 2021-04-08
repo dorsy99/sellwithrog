@@ -37,6 +37,7 @@ export function handler(event, context, callback) {
 
   // post the new route to the Routes form
   request.post({'url': rootURL, 'formData': payload }, function(err, httpResponse, body) {
+    console.log("HTTPRESPONSE: " + JSON.stringify(httpResponse));
     var msg;
     if (err) {
       msg = "Post to Routes stash failed: " + err;
