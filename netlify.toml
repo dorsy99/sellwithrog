@@ -5,8 +5,8 @@
   environment = { NODE_VERSION = "8.9.0" }
 
 [[redirects]]
-  from = "/homepage"
-  to = "https://sellwithrog.carrd.co"
+  from = "/homepage*"
+  to = "https://sellwithrog.carrd.co/*"
   status = 200
   force = true
 
