@@ -6,7 +6,7 @@
 
 [[redirects]]
   from = "/homepage"
-  to = "https://sellwithrog.carrd.co/"
+  to = "https://sellwithrog.carrd.co"
   status = 200
   force = true
 
