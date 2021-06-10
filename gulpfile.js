@@ -47,6 +47,8 @@ gulp.task('clean-js', function () {
 gulp.task("render", function () {
   gulp.src([buildSrc + '/pages/**/[!_]*.html'])
     .pipe(gulp.dest(buildDest))
+  gulp.src([buildSrc + '/pages/admin/config.yml'])
+    .pipe(gulp.dest(buildDest + '/admin'))
 });
 
 
